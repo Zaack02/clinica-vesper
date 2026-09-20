@@ -142,7 +142,7 @@ Opcionalmente, utilize a extensão **Live Server** para visualizar o site em um 
 
 O site utiliza arquivos estáticos e caminhos relativos, com estrutura preparada para hospedagem no GitHub Pages.
 
-**Link público:** a adicionar após a publicação.
+**Link público:** [(https://zaack02.github.io/clinica-vesper/)](https://zaack02.github.io/clinica-vesper/)
 
 <!-- Substitua a linha acima pelo endereço real do GitHub Pages. -->
 
