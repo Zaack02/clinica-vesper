@@ -1,13 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   CLÍNICA VESPER
-   Interações sem bibliotecas externas.
-
-   01. Menu mobile
-   02. Animações discretas
-   03. Formulário demonstrativo
-   ========================================================== */
 
 function iniciarVesper() {
   configurarMenuMobile();
@@ -15,11 +7,6 @@ function iniciarVesper() {
   configurarFormulario();
 }
 
-
-/* ==========================================================
-   01. MENU MOBILE
-   Sem JavaScript, a navegação original continua visível.
-   ========================================================== */
 
 function configurarMenuMobile() {
   const cabecalho = document.querySelector(".site-header__inner");
@@ -75,7 +62,6 @@ function configurarMenuMobile() {
     } else {
       navegacao.hidden = false;
 
-      // Devolve o foco à navegação antes de ocultar seu botão.
       if (focoNoBotao) {
         const primeiroLink = navegacao.querySelector("a[href]");
         primeiroLink?.focus({ preventScroll: true });
@@ -105,7 +91,6 @@ function configurarMenuMobile() {
   });
 
   navegacao.addEventListener("click", (evento) => {
-    // Preserva ações nativas, como abrir links em outra aba.
     if (
       evento.defaultPrevented ||
       evento.ctrlKey ||
@@ -130,8 +115,7 @@ function configurarMenuMobile() {
 
     definirMenu(false);
 
-    // Permite focar a seção sem incluí-la permanentemente
-    // na sequência de navegação pela tecla Tab.
+   
     if (!destino.hasAttribute("tabindex")) {
       destino.setAttribute("tabindex", "-1");
 
@@ -144,8 +128,6 @@ function configurarMenuMobile() {
 
     destino.focus({ preventScroll: true });
 
-    // A ação padrão do link atualiza a âncora e realiza
-    // a rolagem, respeitando o CSS de movimento reduzido.
   });
 
   telaMobile.addEventListener("change", ajustarAoTamanhoDaTela);
@@ -153,11 +135,7 @@ function configurarMenuMobile() {
 }
 
 
-/* ==========================================================
-   02. ANIMAÇÕES DISCRETAS
-   Cada elemento anima uma única vez ao entrar na tela.
-   O conteúdo nunca depende da animação para ficar visível.
-   ========================================================== */
+
 
 function configurarAnimacoes() {
   const movimentoReduzido = window.matchMedia(
@@ -187,8 +165,6 @@ function configurarAnimacoes() {
 
         if (movimentoReduzido.matches) return;
 
-        // Anima somente a opacidade para não disputar o transform
-        // utilizado pelos efeitos de hover do CSS.
         const animacao = entrada.target.animate(
           [
             { opacity: 0.65 },
@@ -224,7 +200,6 @@ function configurarAnimacoes() {
     observador.observe(elemento);
   });
 
-  // Respeita também mudanças de preferência durante a visita.
   movimentoReduzido.addEventListener("change", (evento) => {
     if (!evento.matches) return;
 
@@ -238,11 +213,6 @@ function configurarAnimacoes() {
   });
 }
 
-
-/* ==========================================================
-   03. FORMULÁRIO DEMONSTRATIVO
-   Validação local, sem requisições ou armazenamento.
-   ========================================================== */
 
 function configurarFormulario() {
   const formulario = document.querySelector(".contact-form");
@@ -259,7 +229,6 @@ function configurarFormulario() {
 
   const campos = formulario.querySelectorAll("input, select");
 
-  // Região anunciada por leitores de tela após a simulação.
   const mensagem = document.createElement("p");
 
   mensagem.className = "contact-form__instructions";
@@ -286,7 +255,6 @@ function configurarFormulario() {
       validarTexto(campo);
     });
 
-    // Considera valores que o navegador já tenha preenchido.
     validarTexto(campo);
   });
 
@@ -306,8 +274,7 @@ function configurarFormulario() {
 
     camposDeTexto.forEach(validarTexto);
 
-    // Reutiliza as mensagens e regras nativas do navegador:
-    // campos obrigatórios, formato do e-mail e seleção de estado.
+
     if (!formulario.reportValidity()) {
       mensagem.textContent = "";
       return;
@@ -318,7 +285,6 @@ function configurarFormulario() {
       "nenhum dado foi enviado ou armazenado e nenhum " +
       "agendamento foi realizado.";
 
-    // Mantém os campos preenchidos para permitir a conferência.
   });
 
   botao.disabled = false;
@@ -326,10 +292,7 @@ function configurarFormulario() {
 }
 
 
-/* ==========================================================
-   INICIALIZAÇÃO
-   Funciona com defer ou com o script no final do HTML.
-   ========================================================== */
+
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", iniciarVesper, {
