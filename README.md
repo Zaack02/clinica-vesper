@@ -104,32 +104,6 @@ clinica-vesper/
 | `img/` | Imagens dos serviços e fotografias ilustrativas da equipe |
 | `README.md` | Apresentação e instruções do projeto |
 
-### Imagens provisórias
-
-Os nomes das imagens seguem a estrutura inicial e poderão ser atualizados.
-
-Na versão inicial do HTML, `nutricionista.jpg` é utilizado provisoriamente no perfil da **Dra. Marina Beaumont, psiquiatra**. Esse arquivo deverá ser substituído pela fotografia escolhida para o perfil.
-
-Ao trocar imagens:
-
-1. Salve o arquivo na pasta `img/`.
-2. Atualize o atributo `src` correspondente no HTML, caso o nome ou a extensão mude.
-3. Revise o texto alternativo (`alt`) conforme o conteúdo da imagem.
-4. Confira o enquadramento em telas grandes e pequenas.
-5. Registre a origem e os créditos quando exigidos pela licença da imagem.
-
-Os caminhos devem respeitar exatamente os nomes dos arquivos, incluindo letras maiúsculas, minúsculas e extensões.
-
-## Como executar
-
-### Abrindo diretamente no navegador
-
-1. Baixe ou clone o repositório.
-2. Mantenha os arquivos e a pasta `img/` na estrutura indicada.
-3. Abra o arquivo `index.html` em um navegador atualizado.
-
-Não é necessário instalar dependências ou executar comandos de compilação.
-
 ### Usando o VS Code
 
 1. Abra a pasta `clinica-vesper` no VS Code.
