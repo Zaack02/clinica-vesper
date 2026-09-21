@@ -118,19 +118,7 @@ O site utiliza arquivos estáticos e caminhos relativos, com estrutura preparada
 
 **Link público:** [(https://zaack02.github.io/clinica-vesper/)](https://zaack02.github.io/clinica-vesper/)
 
-<!-- Substitua a linha acima pelo endereço real do GitHub Pages. -->
 
-## Verificação antes da entrega
-
-- [ ] Confirmar que todas as imagens carregam.
-- [ ] Revisar as fotos, os textos alternativos e os créditos.
-- [ ] Testar os links de navegação e o menu mobile.
-- [ ] Conferir o layout em computador e celular.
-- [ ] Verificar se existe rolagem horizontal indevida.
-- [ ] Testar a navegação com Tab e o fechamento do menu com Escape.
-- [ ] Testar campos vazios, e-mail inválido e preenchimento válido.
-- [ ] Conferir o console do navegador.
-- [ ] Publicar o projeto e inserir o link nesta documentação.
 
 ## Autoria
 
